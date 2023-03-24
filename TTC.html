@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Toe</title>
+  <style>
+    .board {
+      display: grid;
+      grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+      gap: 10px;
+      width: 300px;
+      height: 300px;
+      border: 1px solid #000;
+      padding: 10px;
+    }
+
+    .cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      cursor: pointer;
+      background-color: #eee;
+    }
+
+    .cell:hover {
+      background-color: #ddd;
+    }
+
+    .cell.x {
+      color: blue;
+    }
+
+    .cell.o {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="board">
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+  </div>
+
+  <script>
+    const board = document.querySelector('.board');
+    const cells = document.querySelectorAll('.cell');
+    let player = 'x';
+
+    cells.forEach(cell => {
+      cell.addEventListener('click', () => {
+        if (!cell.classList.contains('x') && !cell.classList.contains('o')) {
+          cell.classList.add(player);
+          cell.textContent = player;
+          player = player === 'x' ? 'o' :
