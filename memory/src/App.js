@@ -22,7 +22,6 @@ function App() {
     setTurns(0);
   };
 
-
   return (
     <div className="App">
       <h1>Magic Match</h1>
