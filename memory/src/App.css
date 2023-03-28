@@ -3,7 +3,7 @@
   margin: 40px auto;
 }
 button {
-  background: none;
+  background: #558B83;;
   border: 2px solid #fff;
   padding: 6px 12px;
   border-radius: 4px;
@@ -13,8 +13,9 @@ button {
   font-size: 1em;
 }
 button:hover {
-  background: #c23866;
-  color: #fff;
+  background: white;
+  color: #558B83;
+  border: 2px solid #558B83;
 }
 
 .cardGrid {
